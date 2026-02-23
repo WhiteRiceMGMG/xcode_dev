@@ -21,7 +21,7 @@ struct ContentView: View {
     @State private var currentGear: Gear = .n
 
     var dummySpeed: CGFloat {
-        sliderValue * 1.12 * 100
+        CGFloat(calculate_speed(Double(sliderValue)))
     }
 
     var dummyRPM: CGFloat {

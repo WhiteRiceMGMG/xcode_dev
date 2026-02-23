@@ -45,6 +45,11 @@
 			path = ckpit_simUITests;
 			sourceTree = "<group>";
 		};
+		6F65DDDE2F4C6CF7001559FA /* c_layer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = c_layer;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,7 @@
 		6F65DD982F473E2A001559FA = {
 			isa = PBXGroup;
 			children = (
+				6F65DDDE2F4C6CF7001559FA /* c_layer */,
 				6F65DDA32F473E2A001559FA /* ckpit_sim */,
 				6F65DDB42F473E2D001559FA /* ckpit_simTests */,
 				6F65DDBE2F473E2D001559FA /* ckpit_simUITests */,
@@ -109,6 +115,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				6F65DDA32F473E2A001559FA /* ckpit_sim */,
+				6F65DDDE2F4C6CF7001559FA /* c_layer */,
 			);
 			name = ckpit_sim;
 			packageProductDependencies = (
@@ -175,6 +182,7 @@
 				TargetAttributes = {
 					6F65DDA02F473E2A001559FA = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 					6F65DDB02F473E2D001559FA = {
 						CreatedOnToolsVersion = 16.2;
@@ -393,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ckpit_sim/Preview Content\"";
@@ -412,6 +421,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icloud.XIstrength5.ckpit-sim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "c_layer/ckpit_sim-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ckpit_sim/Preview Content\"";
@@ -441,6 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icloud.XIstrength5.ckpit-sim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "c_layer/ckpit_sim-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
