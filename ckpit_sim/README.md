@@ -1,21 +1,36 @@
 #I/F一覧(初期案)
 
 公開I/F名
-公開和名　　　　　　　　　　　　　　　 機能ラベル
+SWIFT-C間の公開和名　　　　　　　　　 機能ラベル   モジュール
 ---
-アクセル開度(%)                      : pwrtrn 
-ブレーキ開度(%)                      : pwrtrn
-クラッチ開度(%)                      : pwrtrn
-ギアシフト情報(1-5,R,N)              : pwrtrn 
-回転数(rpm)                          : pwrtrn
-スピード(km/h)                       : pwrtrn
-エンストフラグ(ビットフラグ)         : prtct
-IG-ON許可フラグ(ビットフラグ)        : perm
-ギアシフト許可フラグ(ビットフラグ)   : perm
-オーバレブ状態フラグ(ビットフラグ)   : prtct
-半クラ焼きつきフラグ(ビットフラグ)   : prtct
-ブレーキ焼きつきフラグ(ビットフラグ) : prtct
-IG-ON状態フラグ                      : perm
+アクセル開度(%)                      | pwrtrn     | 
+ブレーキ開度(%)                      | pwrtrn     |
+クラッチ開度(%)                      | pwrtrn     |
+ギアシフト情報(1-5,R,N)              | pwrtrn     |
+回転数(rpm)                          | pwrtrn     |
+スピード(km/h)                       | pwrtrn     |
+エンストフラグ(ビットフラグ)         | prtct      |
+IG-ON許可フラグ(ビットフラグ)        | perm       |
+ギアシフト許可フラグ(ビットフラグ)   | perm       |
+オーバレブ状態フラグ(ビットフラグ)   | prtct      |
+半クラ焼きつきフラグ(ビットフラグ)   | prtct      |
+ブレーキ焼きつきフラグ(ビットフラグ) | prtct      |
+IG-ON状態フラグ                      | perm       |
+
+モジュール名と機能
+【アクセル補正】acelcrt
+  入力されたアクセル開度(%)を補正して公開する．
+
+【ブレーキ補正】brakcrt
+  入力されたブレーキ開度(%)を補正して公開する．
+
+【クラッチ補正】clthcrt
+  入力されたクラッチ開度(%)を補正して公開する．
+
+【ギアシフト情報補正】gearcrt
+  入力されたギアシフトを演算用定数に変換して公開する．
+
+【】
 
 
 #ざっくり仕様
@@ -33,11 +48,20 @@ IG-ONしたらアクセル，ブレーキ，クラッチ開度を0%に．シフ�
 加速度を求めたらここから積分して速度を求める．算出した速度を回転数と結びつける？？
 
 [数値モデル]
-トルク = MAXトルク x スロットル開度
-加速度 = ( トルク x ギア比 ) - 抵抗
+トルク = MAXトルク x スロットル開度 
+有効トルク = トルク x クラッチ結合率
+加速度 = ( 有効トルク x ギア比 ) - 抵抗 - ブレーキ
   抵抗 = speed x speed x 定数
 速度(次)   =  速度(前) + 加速度 x 刻み幅単位 (確かLAMMPS(仮)で -x/2, +x/2を組み込んだ気が...?)
 回転数 = 速度 x ギア比 x 定数
+
+engineTorque = throttle × MAXTORQUE
+driveTorque = clutch × engineTorque × gearRatio
+brakeForce = brake × MAX-BRAKE-FORCE
+airDrag = speed x speed × Cdrag
+accel = (driveTorque - brakeForce - airDrag) / mass
+speed += accel × dt
+
 
 結論：シミュレータ演算専用のモジュール作っとく
 
