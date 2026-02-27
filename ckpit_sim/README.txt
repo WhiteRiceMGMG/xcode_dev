@@ -115,7 +115,7 @@ void vdg_brkcrtif_pwon( void ) と，void vdg_brkcrtif_16msh( void )というグ
 全体の流れとしては，vdg_brkcrtif_16msh() の処理では，他ファイルに定義されている1byte型の u1g_swiftif_brkopn（ブレーキ開度(%)）を読み取って，
 補正を行った後に u1g_brkcrtif_brkopn（ブレーキ開度(%)） に格納してください． この時，補正を行っている場合は u1g_brkcrtif_crtflg にOFFを，
 補正を行っていない場合はHIを代入してください.(HI/LOの使用のために "../inc/common.h"をインクルードしてください．)
-vdg_brkcrtif_pwon() の処理ではu 1_brkcrtif_brkopn と，u1_brkcrtif_crtflg に0を代入してください．
+vdg_brkcrtif_pwon() の処理ではu1g_brkcrtif_brkopn と，u1g_brkcrtif_crtflg に0を代入してください．
 
 
 
