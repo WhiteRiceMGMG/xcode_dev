@@ -105,7 +105,7 @@ permモジュール内のIFを集約する．３種の優先度分けて関数�
         u1g_brkcrtif_crtflg    補正有無状態
 ----------------------------------------------
 
-山本向けの記載メモ
+山本pg向けの記載メモ
 ・brkcrtif.h と，brkcrtif.cというファイルを作ってください．
 ・ファイル内のテンプレートとして，以下のURLを使ってください．
 https://github.com/WhiteRiceMGMG/xcode_dev/tree/main/ckpit_sim/c_layer/template
