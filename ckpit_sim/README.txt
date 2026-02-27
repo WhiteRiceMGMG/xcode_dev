@@ -101,9 +101,22 @@ permモジュール内のIFを集約する．３種の優先度分けて関数�
 
 公開IF  公開変数             備考
 ---------------------------------------------
-        u1_brkcrtif_brkopn    補正後ブレーキ開度
-        u1_brkcrtif_crtflg    補正有無状態
+        u1g_brkcrtif_brkopn    補正後ブレーキ開度
+        u1g_brkcrtif_crtflg    補正有無状態
 ----------------------------------------------
+
+山本向けの記載メモ
+・brkcrtif.h と，brkcrtif.cというファイルを作ってください．
+・ファイル内のテンプレートとして，以下のURLを使ってください．
+https://github.com/WhiteRiceMGMG/xcode_dev/tree/main/ckpit_sim/c_layer/template
+
+void vdg_brkcrtif_pwon( void ) と，void vdg_brkcrtif_16msh( void )というグローバル関数を作ってください．
+内部ロジックは自由ですが，1byte型の u1g_brkcrtif_brkopn と，1byte型の u1g_brkcrtif_crtflg というグローバル変数を必ず定義(+extern宣言も)してください．
+全体の流れとしては，vdg_brkcrtif_16msh() の処理では，他ファイルに定義されている1byte型の u1g_swiftif_brkopn（ブレーキ開度(%)）を読み取って，
+補正を行った後に u1g_brkcrtif_brkopn（ブレーキ開度(%)） に格納してください． この時，補正を行っている場合は u1g_brkcrtif_crtflg にOFFを，
+補正を行っていない場合はHIを代入してください.(HI/LOの使用のために "../inc/common.h"をインクルードしてください．)
+vdg_brkcrtif_pwon() の処理ではu 1_brkcrtif_brkopn と，u1_brkcrtif_crtflg に0を代入してください．
+
 
 
 /*****************************************************************************/
