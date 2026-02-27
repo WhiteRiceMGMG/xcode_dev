@@ -111,7 +111,7 @@ permモジュール内のIFを集約する．３種の優先度分けて関数�
 https://github.com/WhiteRiceMGMG/xcode_dev/tree/main/ckpit_sim/c_layer/template
 
 void vdg_brkcrtif_pwon( void ) と，void vdg_brkcrtif_16msh( void )というグローバル関数を作ってください．
-内部ロジックは自由ですが，1byte型の u1g_brkcrtif_brkopn と，1byte型の u1g_brkcrtif_crtflg というグローバル変数を必ず定義(+extern宣言も)してください．
+内部ロジックは自由ですが，符号なし1byte型の u1g_brkcrtif_brkopn と，符号なし1byte型の u1g_brkcrtif_crtflg というグローバル変数を必ず定義(+extern宣言も)してください．
 全体の流れとしては，vdg_brkcrtif_16msh() の処理では，他ファイルに定義されている1byte型の u1g_swiftif_brkopn（ブレーキ開度(%)）を読み取って，
 補正を行った後に u1g_brkcrtif_brkopn（ブレーキ開度(%)） に格納してください．u1g_swiftif_brkopnについては，"../../bridge/swiftif.h""をインクルードしてください．
 この時，補正を行っている場合は u1g_brkcrtif_crtflg にOFFを，
