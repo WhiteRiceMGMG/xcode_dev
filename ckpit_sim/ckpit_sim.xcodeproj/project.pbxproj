@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F65DDEA2F4DC8AD001559FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6F65DDE92F4DC8AD001559FA /* README.md */; };
+		6F65DDF12F51FD71001559FA /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F65DDF02F51FD71001559FA /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		6F65DDB12F473E2D001559FA /* ckpit_simTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ckpit_simTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F65DDBB2F473E2D001559FA /* ckpit_simUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ckpit_simUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F65DDE92F4DC8AD001559FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6F65DDF02F51FD71001559FA /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,6 +87,7 @@
 		6F65DD982F473E2A001559FA = {
 			isa = PBXGroup;
 			children = (
+				6F65DDF02F51FD71001559FA /* README.txt */,
 				6F65DDE92F4DC8AD001559FA /* README.md */,
 				6F65DDDE2F4C6CF7001559FA /* c_layer */,
 				6F65DDA32F473E2A001559FA /* ckpit_sim */,
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F65DDEA2F4DC8AD001559FA /* README.md in Resources */,
+				6F65DDF12F51FD71001559FA /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
