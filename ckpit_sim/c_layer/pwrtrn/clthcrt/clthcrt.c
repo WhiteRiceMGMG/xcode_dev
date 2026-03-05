@@ -8,7 +8,7 @@
 /* ヘッダーインクルード                                 */
 /********************************************************/
 #include "../../inc/common.h"     /* 共通ライブラリ     */
-#include "../../swift/swtbrgif.h" /* u1g_swift_clth     */
+#include "../../swift/swtbrgif.h" /* u1g_swiftif_clth   */
 #include "../clthcrtif.h"         /* 自ヘッダ           */
 
 /********************************************************/
@@ -47,6 +47,33 @@ vdg_clthcrtif_pwon( void )
 void
 vdg_clthcrtif_50msm( void )
 {
+    u1 u1t_clthpct; /* 入力クラッチ値   */
+    u1 u1t_clthrto; /* トルク伝達率     */
+    u1 u1t_clthflg; /* クラッチ補正有無 */
+    
+    /* swift側からクラッチ入力(%)を取得 */
+    u1t_clthpct = u1g_swiftif_clth;
+
+    /* クラッチ入力(%)をトルク伝達率に変換 */
+    u1t_clthrto = (u1)0;
+    u1t_clthflg = (u1)OFF;
+    if (u1t_clthpct <= 40)
+    {
+        u1t_clthflg = (u1)ON;
+        /* ここ適当すぎるから治す．else if の方も．オーバーフローする */
+        u1t_clthrto = (u1)(128 + ((40 - u1t_clthpct) * 256) / 80);
+    }
+    else if (u1t_clthpct <= 70)
+    {
+        u1t_clthflg = (u1)ON;
+        u1t_clthrto = (u1)(((70 - u1t_clthpct) * 256) / 60);
+    }
+
+    /* トルク伝達率を公開 */
+    u1g_clthcrtif_trqrate = u1t_clthrto;
+
+    /* クラッチ補正有無状態を公開 */
+    u1g_clthcrtif_crtflg = u1t_clthflg;
 
 }
 

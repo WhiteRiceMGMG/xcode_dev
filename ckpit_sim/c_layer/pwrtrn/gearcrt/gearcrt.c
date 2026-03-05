@@ -8,7 +8,7 @@
 /* ヘッダーインクルード                                 */
 /********************************************************/
 #include "../../inc/common.h"     /* 共通ライブラリ     */
-#include "../../swift/swtbrgif.h" /* u1g_swift_gear     */
+#include "../../swift/swtbrgif.h" /* u1g_swiftif_gear   */
 #include "../../conf/gearconf.h"  /* u1g_GEAR_NEUTRAL,  */
                                   /* u1g_GEAR_MAX       */
 #include "../gearcrtif.h"         /* I/F公開用ヘッダ    */ 
@@ -65,7 +65,7 @@ vdg_gearcrtif_50msm( void )
     u1 u1t_crtflg;
 
     /* swift側のギア情報を取得 */
-    u1t_gearcrt = u1g_swift_gear;
+    u1t_gearcrt = u1g_swiftif_gear;
     
     /* フェールセーフを設置 */
     if ( u1t_gearcrt >= u1g_GEAR_MAX)
