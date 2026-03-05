@@ -7,6 +7,7 @@
 /********************************************************/
 /* ヘッダーインクルード                                 */
 /********************************************************/
+#include "../../inc/common.h"     /* 共通ライブラリ     */
 #include "../../conf/gearconf.h"  /* u1g_GEAR_NEUTRAL,  */
                                   /* u1g_GEAR_MAX       */
 #include "../gearcrtif.h"         /* u1g_gearcrtif_shft */
