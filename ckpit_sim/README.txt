@@ -136,8 +136,8 @@ vdg_brkcrtif_pwon() の処理ではu1g_brkcrtif_brkopn と，u1g_brkcrtif_crtflg
 
 公開IF  公開変数             備考
 ---------------------------------------------
-        u1_clthcrtif_trqrate   トルク伝達率
-        u1_clthcrtif_crtflg    補正有無状態
+        u1g_clthcrtif_trqrate   トルク伝達率
+        u1g_clthcrtif_crtflg    補正有無状態
 ----------------------------------------------
 
 
