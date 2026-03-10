@@ -1,36 +1,30 @@
-/* ckthcrtif.h                                          */
+/* template.h                                           */
 /********************************************************/
-/* object    | クラッチ補正                             */
-/* edit his  | 2026/03/05 新規作成 ver1.0               */
+/* object    | header                                   */
+/* edit his  | 2025/12/07 make templates                */
 /*           |                                          */
 /********************************************************/
-#ifndef CLTHCRTIF_H
-#define CLTHCRTIF_H
+#ifndef HEADER_H
+#define HEADER_H
 
 /********************************************************/
-/* ヘッダーインクルード                                 */
+/* Header Includes                                      */
 /********************************************************/
 
 /********************************************************/
-/* 外部公開変数・定数・マクロ                           */
+/* External Public Variables, Constants, Macros         */
 /********************************************************/
-extern u1 u1g_clthcrtif_trqrate;        /* トルク伝達率 lsb=1/256 */
-extern u1 u1g_clthcrtif_crtflg;         /* 補正有無状態 */
 
 /********************************************************/
-/* 外部公開関数宣言                                     */
+/* External Function Prototypes                         */
 /********************************************************/
 /********************************************************/
 
-void vdg_clthcrtif_pwon( void );    /* ctltim : pwon    */
-                                    /* 引数   : なし    */
-                                    /* 戻り値 : なし    */
-                            
-void vdg_clthcrtif_50msm( void );   /* ctltim : 50msm   */
-                                    /* 引数   : なし    */
-                                    /* 戻り値 : なし    */
+void vdg_sampleif_function( void ); /* ctltim  : pwon   */
+                                    /* args    : none   */
+                                    /* rtn val : none   */
                                     
-#undef CRTHCRTIF_H
+#undef HEADER_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/

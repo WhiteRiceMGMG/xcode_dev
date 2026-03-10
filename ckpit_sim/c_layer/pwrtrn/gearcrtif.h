@@ -1,32 +1,28 @@
-/* gearcrtif.h                                          */
+/* template.h                                           */
 /********************************************************/
-/* object    | ギアシフト情報補正                       */
-/* edit his  | 2026/03/02 新規作成 ver1.0               */
+/* object    | header                                   */
+/* edit his  | 2025/12/07 make templates                */
 /*           |                                          */
 /********************************************************/
-#ifndef GEARCRTIF_H
-#define GEARCRTIF_H
+#ifndef HEADER_H
+#define HEADER_H
 
 /********************************************************/
-/* ヘッダーインクルード                                 */
+/* Header Includes                                      */
 /********************************************************/
 
 /********************************************************/
-/* 外部公開変数・定数・マクロ                           */
+/* External Public Variables, Constants, Macros         */
 /********************************************************/
-extern u1 u1g_gearcrtif_shft;   /* ノイズ除去済ギアシフト情報 */
-extern u1 u1g_gearcrtif_crtflg; /* ノイズ除去有無状態         */
 
 /********************************************************/
-/* 外部公開関数宣言                                     */
+/* External Function Prototypes                         */
 /********************************************************/
-void vdg_gearcrtif_pwon( void );    /* ctltim : pwon    */
-                                    /* 引数   : なし    */
-                                    /* 戻り値 : なし    */
+/********************************************************/
 
-void vdg_gearcrtif_crtflg( void );  /* ctltim : 50msm   */
-                                    /* 引数   : なし    */
-                                    /* 戻り値 : なし    */
+void vdg_sampleif_function( void ); /* ctltim  : pwon   */
+                                    /* args    : none   */
+                                    /* rtn val : none   */
                                     
 #undef HEADER_H
 /********************************************************/

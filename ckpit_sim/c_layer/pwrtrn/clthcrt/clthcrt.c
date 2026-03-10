@@ -1,66 +1,66 @@
 /* crthcrt.c                                            */
 /********************************************************/
-/* object    | クラッチ補正                             */
-/* edit his  | 2026/03/05 新規作成 ver1.0               */
+/* object    | Clutch Correcion                         */
+/* edit his  | 2026/03/05 make new ver1.0               */
 /*           |                                          */
 /********************************************************/
 /********************************************************/
-/* ヘッダーインクルード                                 */
+/* Header Includes                                      */
 /********************************************************/
-#include "../../inc/common.h"     /* 共通ライブラリ     */
+#include "../../inc/common.h"     /* common library     */
 #include "../../swift/swtbrgif.h" /* u1g_swiftif_clth   */
-#include "../clthcrtif.h"         /* 自ヘッダ           */
+#include "../clthcrtif.h"         /* self header        */
 
 /********************************************************/
-/* 外部公開変数                                         */
+/* External Public Variables, Consants, Macros          */
 /********************************************************/
-u1 u1g_clthcrtif_trqrate;        /* トルク伝達率 lsb=1/256 */
-u1 u1g_clthcrtif_crtflg;         /* 補正有無状態 */
+u1 u1g_clthcrtif_trqrate;        /* trq com   lsb=1/256 */
+u1 u1g_clthcrtif_crtflg;         /* correcion onoff     */
 
 /********************************************************/
-/* 内部公開変数・定数・マクロ                           */
+/* Internal Public Variables, Constans, Macros          */
 /********************************************************/
 
 /********************************************************/
-/* 外部公開関数定義                                     */
+/* External Public Function Definitions                 */
 /********************************************************/
 /********************************************************/
-/* 関数   | vdg_clthcrtif_pwon()                        */
-/* 説明   | クラッチ補正初期化処理                      */
-/* 引数   | なし                                        */
-/* 戻り値 | なし                                        */
+/* func    | vdg_clthcrtif_pwon()                       */
+/* abst    | Clutch Correction pwon                     */
+/* args    | none                                       */
+/* rtn val | none                                       */
 /********************************************************/
 void
 vdg_clthcrtif_pwon( void )
 {
-    /* 初期化時はトルク伝達率を0%，補正有無を無しに設定 */
+    /* when pwon set trq-com 0&, and cor off */
     u1g_clthcrtif_trqrate = (u1)0;
     u1g_clthcrtif_crtflg = (u1)OFF;
 }
 
 /********************************************************/
-/* 関数   | vdg_clthcrtif_50msm()                       */
-/* 説明   | クラッチ補正50msm処理                       */
-/* 引数   | なし                                        */
-/* 戻り値 | なし                                        */
+/* func    | vdg_clthcrtif_50msm()                      */
+/* abst    | Clutch Correction 50msm                    */
+/* args    | none                                       */
+/* rtn val | none                                       */
 /********************************************************/
 void
 vdg_clthcrtif_50msm( void )
 {
-    u1 u1t_clthpct; /* 入力クラッチ値   */
-    u1 u1t_clthrto; /* トルク伝達率     */
-    u1 u1t_clthflg; /* クラッチ補正有無 */
+    u1 u1t_clthpct; /* input clutch percent */
+    u1 u1t_clthrto; /* trq com              */
+    u1 u1t_clthflg; /* trq cor onoff        */
     
-    /* swift側からクラッチ入力(%)を取得 */
+    /* get clutch percent from swift */
     u1t_clthpct = u1g_swiftif_clth;
 
-    /* クラッチ入力(%)をトルク伝達率に変換 */
+    /* change clutch to clt com */
     u1t_clthrto = (u1)0;
     u1t_clthflg = (u1)OFF;
     if (u1t_clthpct <= 40)
     {
         u1t_clthflg = (u1)ON;
-        /* ここ適当すぎるから治す．else if の方も．オーバーフローする */
+        /* uuuum...  */
         u1t_clthrto = (u1)(128 + ((40 - u1t_clthpct) * 256) / 80);
     }
     else if (u1t_clthpct <= 70)
@@ -69,23 +69,23 @@ vdg_clthcrtif_50msm( void )
         u1t_clthrto = (u1)(((70 - u1t_clthpct) * 256) / 60);
     }
 
-    /* トルク伝達率を公開 */
+    /* release clutch trque */
     u1g_clthcrtif_trqrate = u1t_clthrto;
 
-    /* クラッチ補正有無状態を公開 */
+    /* relsea clutch corrections on off */
     u1g_clthcrtif_crtflg = u1t_clthflg;
 
 }
 
 /********************************************************/
-/* 内部関数定義                                         */
+/* Internal Public Function Definitions                 */
 /********************************************************/
 
 /********************************************************/
-/* 関数   | u1 u1g_sample_function( void )              */
-/* 説明   | ドライブモード取得関数宣言                  */
-/* 引数   | なし                                        */
-/* 戻り値 | なし                                        */
+/* func    | u1 u1g_sample_function( void )             */
+/* abst    | drive mode getter function                 */
+/* args    | none                                       */
+/* rtn val | none                                       */
 /********************************************************/
 
 /********************************************************/

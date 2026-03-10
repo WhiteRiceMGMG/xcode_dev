@@ -323,3 +323,7 @@ Cロジック提供ロジック
 ## コードを書くとき
 `g_sliderValue`
 <pre> ```c double g_sliderValue; ``` </pre>
+
+
+
+thinkpad x60s edhi
