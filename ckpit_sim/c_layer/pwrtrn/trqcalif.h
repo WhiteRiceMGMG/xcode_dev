@@ -1,11 +1,11 @@
-/* template.h                                           */
+/* trqcalif.h                                           */
 /********************************************************/
-/* object    | header                                   */
-/* edit his  | 2025/12/07 make templates                */
+/* object    | trqcal                                   */
+/* edit his  | 2026/03/10 make new ver1.0               */
 /*           |                                          */
 /********************************************************/
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef TRQCALIF_H
+#define TRQCALIF_H
 
 /********************************************************/
 /* Header Includes                                      */
@@ -14,17 +14,20 @@
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+extern u1 u1g_trqcalif_efctrq;      /* effective torque */
 
 /********************************************************/
 /* External Function Prototypes                         */
 /********************************************************/
-/********************************************************/
-
-void vdg_sampleif_function( void ); /* ctltim  : pwon   */
+void vdg_trqcalif_pwon( void );     /* ctltim  : pwon   */
                                     /* args    : none   */
                                     /* rtn val : none   */
-                                    
-#undef HEADER_H
+
+void vdg_trqcalif_50msm( void );    /* ctltim  : 50msm  */
+                                    /* args    : none   */
+                                    /* rtn val : none   */
+
+#undef TRQCALIF_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/
