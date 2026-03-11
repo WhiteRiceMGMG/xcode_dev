@@ -1,16 +1,20 @@
-/* source-template.c                                    */
+/* acelcrt.c                                            */
 /********************************************************/
-/* object    | template C source                        */
-/* edit his  | 2025/2/2 make template                   */
+/* object    | accel correction                         */
+/* edit his  | 2026/03/11 make new ver1.0               */
 /*           |                                          */
 /********************************************************/
 /********************************************************/
 /* Header Includes                                      */
 /********************************************************/
+#include "../../inc/common.h"         /* common library */
+#include "../acelcrtif.h"             /* self header    */
 
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+u1 u1g_acelcrtif_thlopn;    /* accel correctoin         */
+u1 u1g_acelcrtif_crtflg;    /* correction bool on/off   */
 
 /********************************************************/
 /* Internal Public Variables, Constants, Macros         */
