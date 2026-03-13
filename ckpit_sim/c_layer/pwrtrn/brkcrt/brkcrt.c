@@ -25,11 +25,27 @@ u1 u1g_brkcrtif_crtflg; /* correction bool on off       */
 /********************************************************/
 
 /********************************************************/
-/* func    | u1 u1g_sample_function( void )             */
-/* abst    | drive mode getter functoins                */
+/* func    | vdg_brkcrtif_pwon( void )                  */
+/* abst    | brake correction                           */
 /* args    | none                                       */
 /* rtn val | none                                       */
 /********************************************************/
+void
+vdg_brkcrtif_pwon( void )
+{
+}
+
+
+/********************************************************/
+/* func    | vdg_brkcrtif_16msh( void )                 */
+/* abst    | brake correction                           */
+/* args    | none                                       */
+/* rtn val | none                                       */
+/********************************************************/
+void
+vdg_brkcrtif_16msh( void )
+{
+}
 
 /********************************************************/
 /* Internal Public Function Definitions                 */
