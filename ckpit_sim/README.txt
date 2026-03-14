@@ -22,6 +22,30 @@ IG-ON状態フラグ                      | perm       |
 c_layer/swift/swtbrgif.hにswift側のIFを集約
 モジュール名と機能
 
+c_layer
+ |-perm
+ |-prtct
+ |-pwrtrn
+ |-inc
+ |  |-*common.h
+ |
+ |-swift
+ |  |-*swiftif.h
+ |
+ |-conf
+ |  |-gearconf.h 
+ |  |   |-*u1g_GEAR_NEUTRAL
+ |  |   |-*u1g_GEAR_MAX
+ |  |
+ |  |-trqconf.h
+ |  |   |-*u1g_TORQUE_MAX
+ |
+ |-ckpit_sim-Briging-Header.h
+ |  |-*u1g_swiftif_clth
+ |  |-*u1g_swiftif_gear
+
+
+
 /*************************************************************************/
 /* 【カウンタ                                                           */
 /*************************************************************************/
