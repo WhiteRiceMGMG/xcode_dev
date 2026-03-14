@@ -33,6 +33,8 @@ u1 u1g_brkcrtif_crtflg; /* correction bool on off       */
 void
 vdg_brkcrtif_pwon( void )
 {
+    u1g_brkcrtif_brkopn = (u1)0;
+    u1g_brkcrtif_crtflg = (u1)0;
 }
 
 
