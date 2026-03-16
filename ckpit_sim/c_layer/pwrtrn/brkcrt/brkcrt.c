@@ -47,6 +47,13 @@ vdg_brkcrtif_pwon( void )
 void
 vdg_brkcrtif_16msh( void )
 {
+    u1 u1t_brkcrt;
+    u1 u1t_crtonoff;
+
+    u1t_brkcrt = u1g_brkcrtif_brkpon;
+    u1t_crtonoff = u1g_brkcrtif_crtflg;
+
+    
 }
 
 /********************************************************/
