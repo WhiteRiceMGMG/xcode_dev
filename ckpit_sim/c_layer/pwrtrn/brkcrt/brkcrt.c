@@ -8,6 +8,8 @@
 /* Header Includes                                      */
 /********************************************************/
 #include "../../inc/common.h"         /* common header */
+#include "../../inc/cmnclk.h"         /* u1g_absval()  */
+#include "../../conf/brkconf.h"       /* u1g_BRK_MAX   */
 #include "../brkcrtif.h"              /* self header   */
 
 /********************************************************/
@@ -47,13 +49,25 @@ vdg_brkcrtif_pwon( void )
 void
 vdg_brkcrtif_16msh( void )
 {
+    u1 u1t_brkopn; 
     u1 u1t_brkcrt;
     u1 u1t_crtonoff;
 
-    u1t_brkcrt = u1g_brkcrtif_brkpon;
-    u1t_crtonoff = u1g_brkcrtif_crtflg;
+    u1t_brkopn = u1g_swiftif_brkopn;
+    u1t_brkhys = ((u1g_BRK_MAX * 0.05) + 0.5);
+    u1t_absbrk = u1g_abscal( u1t_brkopn, u1t_brkcrt_o );
 
-    
+    u1t_crtonoff = (u1)OFF;
+    u1t_brkcrt = u1t_brkcrt_o;
+    if ( u1t_absbrk > u1t_brkhys )
+    {
+        u1t_crtonoff = (u1)ON;
+        u1t_brkcrt = u1t_brkopn;
+    }
+
+    u1s_brkcrt_o = u1t_brkopn;
+    u1g_brkcrtif_brkopn = u1t_brkcrt;
+    u1g_brkcrtif_crtflg = u1t_crtonoff;
 }
 
 /********************************************************/
