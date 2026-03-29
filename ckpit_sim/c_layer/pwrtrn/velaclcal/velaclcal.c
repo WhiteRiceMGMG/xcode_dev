@@ -1,31 +1,58 @@
-/* source-template.c                                    */
+/* velaclcal.c                                          */
 /********************************************************/
-/* object    | template C source                        */
-/* edit his  | 2025/2/2 make template                   */
+/* object    | calc vel and acl                         */
+/* edit his  | 2026/03/22 make ver1.0                   */
 /*           |                                          */
 /********************************************************/
 /********************************************************/
 /* Header Includes                                      */
 /********************************************************/
+#include "../../inc/common.h"
+#include ""
+
+#include "../velaclcalif.h"
+
 
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+u1 u1g_velaclcalif_efcacl;
+u1 u1g_velaclcalif_efcvel;
 
 /********************************************************/
 /* Internal Public Variables, Constants, Macros         */
 /********************************************************/
+
 
 /********************************************************/
 /* External Public Function Definitions                 */
 /********************************************************/
 
 /********************************************************/
-/* func    | u1 u1g_sample_function( void )             */
-/* abst    | drive mode getter functoins                */
+/* func    | vdg_velaclcalif_pwon()                     */
+/* abst    | cal vel and acl function                   */
 /* args    | none                                       */
 /* rtn val | none                                       */
 /********************************************************/
+void
+vdg_velaclcalif_pwon( void )
+{
+
+}
+
+/********************************************************/
+/* func    | vdg_velaclcalif_50msm()                    */
+/* abst    | cal vel and acl function                   */
+/* args    | none                                       */
+/* rtn val | none                                       */
+/********************************************************/
+void
+vdg_velaclcalif_50msm( void )
+{
+
+}
+
+
 
 /********************************************************/
 /* Internal Public Function Definitions                 */

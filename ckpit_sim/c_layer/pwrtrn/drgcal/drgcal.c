@@ -1,16 +1,19 @@
-/* source-template.c                                    */
+/* drgcal.c                                             */
 /********************************************************/
-/* object    | template C source                        */
-/* edit his  | 2025/2/2 make template                   */
+/* object    | drag calcuation                          */
+/* edit his  | 2026/03/22 make Ver1.0                   */
 /*           |                                          */
 /********************************************************/
 /********************************************************/
 /* Header Includes                                      */
 /********************************************************/
+#include "../../inc/common.h"    /* common header       */
+#include "../../swift/swiftif.h" /* */
 
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+u1 u1g_drgcalif_sumresit; 
 
 /********************************************************/
 /* Internal Public Variables, Constants, Macros         */
@@ -21,11 +24,30 @@
 /********************************************************/
 
 /********************************************************/
-/* func    | u1 u1g_sample_function( void )             */
-/* abst    | drive mode getter functoins                */
+/* func    | vdg_drgcalif_pwon( void )                  */
+/* abst    | calcate pwon drg                           */
 /* args    | none                                       */
 /* rtn val | none                                       */
 /********************************************************/
+void
+vdg_drgcalif_pwon( void )
+{
+
+}
+
+
+/********************************************************/
+/* func    | vdg_drgcalif_50msm( void                   */
+/* abst    | calcate 50msm drg                          */
+/* args    | none                                       */
+/* rtn val | none                                       */
+/********************************************************/
+void
+vdg_drgcalif_50msm( void )
+{
+    /* cal drg, air, roll,  */
+}
+
 
 /********************************************************/
 /* Internal Public Function Definitions                 */

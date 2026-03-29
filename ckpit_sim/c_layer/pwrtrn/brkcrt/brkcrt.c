@@ -21,6 +21,7 @@ u1 u1g_brkcrtif_crtflg; /* correction bool on off       */
 /********************************************************/
 /* Internal Public Variables, Constants, Macros         */
 /********************************************************/
+static u1 u1t_brkcrt_o; /* internal brk crt  */
 
 /********************************************************/
 /* External Public Function Definitions                 */
@@ -54,7 +55,7 @@ vdg_brkcrtif_16msh( void )
     u1 u1t_crtonoff;
 
     u1t_brkopn = u1g_swiftif_brkopn;
-    u1t_brkhys = ((u1g_BRK_MAX * 0.05) + 0.5);
+    u1t_brkhys = ((u1g_BRK_MAX * 5 / 100) + 0.5);
     u1t_absbrk = u1g_abscal( u1t_brkopn, u1t_brkcrt_o );
 
     u1t_crtonoff = (u1)OFF;
