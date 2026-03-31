@@ -325,8 +325,6 @@ accel = (driveTorque - brakeForce - airDrag) / mass
 speed += accel × dt
 
 
-結論：シミュレータ演算専用のモジュール作っとく
-
 
 
 
