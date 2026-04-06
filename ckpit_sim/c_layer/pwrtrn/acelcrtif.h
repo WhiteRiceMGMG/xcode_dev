@@ -1,6 +1,6 @@
 /* acelcrtif.h                                          */
 /********************************************************/
-/* object    | crt acel                                 */
+/* object    | acelcrt                                  */
 /* edit his  | 2023/03/28 make Ver1.0                   */
 /*           |                                          */
 /********************************************************/
@@ -14,8 +14,8 @@
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
-extern u1 u1g_acelcrtif_thlopn; /* crted acel thl opn(%) */
-extern u1 u1g_acelcrtif_crtflg; /* acel crt flg */
+extern u1 u1g_acelcrtif_thlopn; /* crted acel thl opn   */
+extern u1 u1g_acelcrtif_crtflg; /* acel crt flg         */
 
 /********************************************************/
 /* External Function Prototypes                         */
@@ -31,7 +31,7 @@ void vdg_acelcrtif_50msm( void );   /* ctltim  : 50msm  */
                                     /* args    : none   */
                                     /* rtn val : none   */
 
-#undef HEADER_H
+#undef ACELCRTIF_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/

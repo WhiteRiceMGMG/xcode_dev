@@ -1,6 +1,6 @@
 /* acelcrt.c                                            */
 /********************************************************/
-/* object    | accel correction                         */
+/* object    | acelcrt                                  */
 /* edit his  | 2026/03/11 make Ver1.0                   */
 /*           |                                          */
 /********************************************************/
@@ -38,15 +38,13 @@ void
 vdg_acelcrtif_pwon( void )
 {
     u1 u1t_aceltmp;
-    
+
     u1t_aceltmp = u1g_swiftif_acel;
 
     u1s_acelcrt_thlopn_o = u1t_aceltmp;
     u1g_acelcrtif_thlopn = u1t_aceltmp;
     u1g_acelcrtif_crtflg = (u1)ON;
-
 }
-
 
 /********************************************************/
 /* func    | vdg_acelcrtif_50msm()                      */
@@ -67,6 +65,7 @@ vdg_acelcrtif_50msm( void )
 
     u1t_crtflg = (u1)OFF;
     u1t_aceltmp = u1t_aceltmp_o;
+
     if ( u1t_swift_aceltmp >= u1t_aceltmp_o)
     {
         if ( u1t_swift_aceltmp - u1t_aceltmp_o 
@@ -98,4 +97,3 @@ vdg_acelcrtif_50msm( void )
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/
-

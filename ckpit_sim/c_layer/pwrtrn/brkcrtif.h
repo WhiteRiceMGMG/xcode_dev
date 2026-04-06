@@ -1,11 +1,11 @@
-/* template.h                                           */
+/* brkcrtif.h                                           */
 /********************************************************/
-/* object    | header                                   */
+/* object    | brkcrt                                   */
 /* edit his  | 2025/12/07 make templates                */
 /*           |                                          */
 /********************************************************/
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef BRKCRTIF_H
+#define BRKCRTIF_H
 
 /********************************************************/
 /* Header Includes                                      */
@@ -14,17 +14,24 @@
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+extern u1 u1g_brkcrtif_brkopn;
+extern u1 u1g_brkcrtif_crtflg;
 
 /********************************************************/
 /* External Function Prototypes                         */
 /********************************************************/
 /********************************************************/
 
-void vdg_sampleif_function( void ); /* ctltim  : pwon   */
+void vdg_brkcrtif_pwon( void );     /* ctltim  : pwon   */
                                     /* args    : none   */
                                     /* rtn val : none   */
-                                    
-#undef HEADER_H
+                                   
+
+void vdg_brkcrtif_16msm( void );    /* ctltim  : 16msm  */
+                                    /* args    : none   */
+                                    /* rtn val : none   */
+
+#undef BRKCRTIF_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/
