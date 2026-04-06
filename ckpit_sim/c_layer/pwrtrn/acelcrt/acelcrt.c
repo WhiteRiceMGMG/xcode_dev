@@ -7,8 +7,9 @@
 /********************************************************/
 /* Header Includes                                      */
 /********************************************************/
-#include "../../inc/common.h"         /* common library */
-#include "../acelcrtif.h"             /* self header    */
+#include "../../inc/common.h"       /* common library   */
+#include "../..swift/swiftif.h"     /* u1g_swiftif_acel */
+#include "../acelcrtif.h"           /* self header      */
 
 
 /********************************************************/
@@ -21,6 +22,7 @@ u1 u1g_acelcrtif_crtflg;    /* correction bool on/off   */
 /* Internal Public Variables, Constants, Macros         */
 /********************************************************/
 static u1 u1s_acelcrt_thlopn_o;
+#define u1g_ACEL_THLD (u1)3;
 
 /********************************************************/
 /* External Public Function Definitions                 */
@@ -73,7 +75,7 @@ vdg_acelcrtif_50msm( void )
             u1t_crtflg = (u1)ON;
             u1t_aceltmp = u1t_swift_aceltmp;
         }
-    } 
+    }
     else
     {
         if ( u1t_aceltmp_o - u1t_swift_aceltmp
@@ -89,18 +91,8 @@ vdg_acelcrtif_50msm( void )
     u1s_acelcrt_thlopn_o = u1t_aceltmp;
 }
 
-
-
-
 /********************************************************/
 /* Internal Public Function Definitions                 */
-/********************************************************/
-
-/********************************************************/
-/* func    | u1 u1g_sample_function( void )             */
-/* abst    | drive mode processing functions            */
-/* args    | none                                       */
-/* rtn val | none                                       */
 /********************************************************/
 
 /********************************************************/
