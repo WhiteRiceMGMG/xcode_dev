@@ -1,11 +1,11 @@
-/* template.h                                           */
+/* clthcrtif.h                                          */
 /********************************************************/
-/* object    | header                                   */
-/* edit his  | 2025/12/07 make templates                */
+/* object    | clthcrt                                  */
+/* edit his  | 2026.04.07 make new Ver1.0               */
 /*           |                                          */
 /********************************************************/
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef CLTHCRTIF_H
+#define CLTHCRTIF_H
 
 /********************************************************/
 /* Header Includes                                      */
@@ -14,17 +14,23 @@
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+extern u1 u1g_clthcrtif_trqrate;
+extern u1 u1g_clthcrtif_crtflg;
 
 /********************************************************/
 /* External Function Prototypes                         */
 /********************************************************/
 /********************************************************/
 
-void vdg_sampleif_function( void ); /* ctltim  : pwon   */
+void vdg_clthcrtif_pwon( void );    /* ctltim  : pwon   */
                                     /* args    : none   */
                                     /* rtn val : none   */
-                                    
-#undef HEADER_H
+                                   
+
+void vdg_clthcrtif_50msm( void );   /* ctltim  : 50msm  */
+                                    /* args    : none   */
+                                    /* rtn val : none   */
+#undef CLTHCRTIF_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/

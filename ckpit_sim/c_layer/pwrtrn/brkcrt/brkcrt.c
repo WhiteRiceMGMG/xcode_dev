@@ -7,10 +7,11 @@
 /********************************************************/
 /* Header Includes                                      */
 /********************************************************/
-#include "../../inc/common.h"          /* common header */
-#include "../../inc/cmnclk.h"          /* u1g_absval()  */
-#include "../../conf/cmnconf.h"        /* u1g_BRK_MAX   */
-#include "../brkcrtif.h"               /* self header   */
+#include "../../inc/common.h"     /* common header      */
+#include "../../inc/cmnclk.h"     /* u1g_absval()       */
+#include "../../swift/swiftif.h"  /* u1g_swiftif_brkopn */
+#include "../../conf/cmnconf.h"   /* u1g_BRK_MAX        */
+#include "../brkcrtif.h"          /* self header        */
 
 /********************************************************/
 /* External Public Variables, Constants, Macros         */

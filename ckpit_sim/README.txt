@@ -49,7 +49,9 @@ c_layer
  |
  |-swift
  |  |-swiftif.h
- |  |   |-*u1g_swiftif_acel;
+ |  |   |-*u1g_swiftif_acel
+ |  |   |-*u1g_swiftif_brkopn
+ |  |   |-*u1g_swiftif_clth
  |
  |-conf
  |  |-gearconf.h[廃止→cmnconfに統合予定]

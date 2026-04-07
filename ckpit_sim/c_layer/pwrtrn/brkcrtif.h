@@ -1,7 +1,7 @@
 /* brkcrtif.h                                           */
 /********************************************************/
 /* object    | brkcrt                                   */
-/* edit his  | 2025/12/07 make templates                */
+/* edit his  | 2026.04.06 make new Ver1.0               */
 /*           |                                          */
 /********************************************************/
 #ifndef BRKCRTIF_H
@@ -25,7 +25,6 @@ extern u1 u1g_brkcrtif_crtflg;
 void vdg_brkcrtif_pwon( void );     /* ctltim  : pwon   */
                                     /* args    : none   */
                                     /* rtn val : none   */
-                                   
 
 void vdg_brkcrtif_16msm( void );    /* ctltim  : 16msm  */
                                     /* args    : none   */
