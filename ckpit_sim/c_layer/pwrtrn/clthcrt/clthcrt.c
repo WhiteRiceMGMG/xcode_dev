@@ -8,7 +8,7 @@
 /* Header Includes                                      */
 /********************************************************/
 #include "../../inc/common.h"     /* common library     */
-#include "../../swift/swtbrgif.h" /* u1g_swiftif_clth   */
+#include "../../swift/swiftif.h"  /* u1g_swiftif_clth   */
 #include "../clthcrtif.h"         /* self header        */
 
 /********************************************************/
@@ -60,7 +60,6 @@ vdg_clthcrtif_50msm( void )
     if (u1t_clthpct <= 40)
     {
         u1t_clthflg = (u1)ON;
-        /* uuuum...  */
         u1t_clthrto = (u1)(128 + ((40 - u1t_clthpct) * 256) / 80);
     }
     else if (u1t_clthpct <= 70)
