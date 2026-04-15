@@ -50,7 +50,7 @@ vdg_clthcrtif_50msm( void )
     u1 u1t_clthpct; /* input clutch percent */
     u1 u1t_clthrto; /* trq com              */
     u1 u1t_clthflg; /* trq cor onoff        */
-    
+
     /* get clutch percent from swift */
     u1t_clthpct = u1g_swiftif_clth;
 
