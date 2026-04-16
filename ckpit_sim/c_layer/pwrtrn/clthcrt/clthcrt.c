@@ -33,7 +33,6 @@ u1 u1g_clthcrtif_crtflg;         /* correcion onoff     */
 void
 vdg_clthcrtif_pwon( void )
 {
-    /* when pwon set trq-com 0&, and cor off */
     u1g_clthcrtif_trqrate = (u1)0;
     u1g_clthcrtif_crtflg = (u1)OFF;
 }
@@ -47,9 +46,9 @@ vdg_clthcrtif_pwon( void )
 void
 vdg_clthcrtif_50msm( void )
 {
-    u1 u1t_clthpct; /* input clutch percent */
-    u1 u1t_clthrto; /* trq com              */
-    u1 u1t_clthflg; /* trq cor onoff        */
+    u1 u1t_clthpct;
+    u1 u1t_clthrto;
+    u1 u1t_clthflg;
 
     u1t_clthpct = u1g_swiftif_clth;
 
@@ -72,9 +71,7 @@ vdg_clthcrtif_50msm( void )
     }
 
     u1g_clthcrtif_trqrate = u1t_clthrto;
-
     u1g_clthcrtif_crtflg = u1t_clthflg;
-
 }
 
 /********************************************************/
