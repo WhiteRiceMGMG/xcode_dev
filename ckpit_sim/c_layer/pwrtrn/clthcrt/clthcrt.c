@@ -51,27 +51,28 @@ vdg_clthcrtif_50msm( void )
     u1 u1t_clthrto; /* trq com              */
     u1 u1t_clthflg; /* trq cor onoff        */
 
-    /* get clutch percent from swift */
     u1t_clthpct = u1g_swiftif_clth;
 
-    /* change clutch to clt com */
     u1t_clthrto = (u1)0;
     u1t_clthflg = (u1)OFF;
     if (u1t_clthpct <= 40)
     {
         u1t_clthflg = (u1)ON;
-        u1t_clthrto = (u1)(128 + ((40 - u1t_clthpct) * 256) / 80);
+        u1t_clthrto = (u1)((clthpct * 50) / 40)
     }
     else if (u1t_clthpct <= 70)
     {
         u1t_clthflg = (u1)ON;
-        u1t_clthrto = (u1)(((70 - u1t_clthpct) * 256) / 60);
+        u1t_clthrto =  (u1)(50 + ((clthpct - 40) * 5))
+    }
+    else
+    {
+        u1t_clthclg = (u1)ON;
+        u1t_clthrto = (u1)(200 + ((clthpct - 70) * 2))
     }
 
-    /* release clutch trque */
     u1g_clthcrtif_trqrate = u1t_clthrto;
 
-    /* relsea clutch corrections on off */
     u1g_clthcrtif_crtflg = u1t_clthflg;
 
 }
