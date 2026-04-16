@@ -31,13 +31,19 @@ c_layer
  |  |  |-*u1g_acelcrtif_crtflg
  |  |  |-*vdg_acelcrtif_pwon()
  |  |  |-*vdg_acelcrtif_50msm()
- |  |  
+ |  |
  |  |-brkcrtif.h
  |  |  |-*u1g_brkcrtif_brkopn
  |  |  |-*u1g_brkcrtif_crtflg
  |  |  |-*vdg_brkcrtif_pwon()
  |  |  |-*vdg_brkcrtif_16msm()
-
+ |  |
+ |  |-clthcrtif.h
+ |  |  |-*u1g_clthcrtif_trqrate
+ |  |  |-*u1g_clthcrtif_crtflg
+ |  |  |-*vdg_clthcrtif_pwon()
+ |  |  |-*vdg_clthcrtif_50msm()
+ |  |
 
  |-inc
  |  |-common.h
