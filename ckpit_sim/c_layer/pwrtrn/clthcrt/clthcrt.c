@@ -14,7 +14,7 @@
 /********************************************************/
 /* External Public Variables, Consants, Macros          */
 /********************************************************/
-u1 u1g_clthcrtif_trqrate;        /* trq com   lsb=1/256 */
+u1 u1g_clthcrtif_trqrate;        /* lsb=100/256         */
 u1 u1g_clthcrtif_crtflg;         /* correcion onoff     */
 
 /********************************************************/
