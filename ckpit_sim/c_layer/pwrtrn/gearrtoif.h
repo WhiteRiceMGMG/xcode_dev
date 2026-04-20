@@ -1,11 +1,11 @@
-/* template.h                                           */
+/* gearrtoif.h                                          */
 /********************************************************/
-/* object    | header                                   */
+/* object    | gearrto                                  */
 /* edit his  | 2025/12/07 make templates                */
 /*           |                                          */
 /********************************************************/
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef GEARRTOIF_H
+#define GEARRTOIF_H
 
 /********************************************************/
 /* Header Includes                                      */
@@ -14,17 +14,22 @@
 /********************************************************/
 /* External Public Variables, Constants, Macros         */
 /********************************************************/
+extern u1 u1g_gearrtoif_ratio;
 
 /********************************************************/
 /* External Function Prototypes                         */
 /********************************************************/
 /********************************************************/
 
-void vdg_sampleif_function( void ); /* ctltim  : pwon   */
-                                    /* args    : none   */
-                                    /* rtn val : none   */
-                                    
-#undef HEADER_H
+void vdg_gearrtoif_pwon( void );  /* ctltim  : pwon   */
+                                  /* args    : none   */
+                                  /* rtn val : none   */
+
+
+void vdg_gearrtoif_50msm( void ); /* ctltim  : 50msm  */
+                                  /* args    : none   */
+                                  /* rtn val : none   */
+#undef GEARRTOIF_H
 /********************************************************/
 /* EOF                                                  */
 /********************************************************/

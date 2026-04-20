@@ -9,6 +9,7 @@ SWIFT-C間の公開和名　　　　　　　　　 機能ラベル   モジュ
 ブレーキ開度(%)                      | pwrtrn     |
 クラッチ開度(%)                      | pwrtrn     |
 ギアシフト情報(1-5,R,N)              | pwrtrn     |
+
 回転数(rpm)                          | pwrtrn     |
 スピード(km/h)                       | pwrtrn     |
 エンストフラグ(ビットフラグ)         | prtct      |
@@ -44,7 +45,10 @@ c_layer
  |  |  |-*vdg_clthcrtif_pwon()
  |  |  |-*vdg_clthcrtif_50msm()
  |  |
-
+ |  |-gearrtoif.h
+ |  |  |-*u1g_gearrtoif_ratio;
+ |  |  |-*vdg_gearrtioif_pwon()
+ |  |  |-*vdg_gearrtoif_50msm()
  |-inc
  |  |-common.h
  |  |  |-*(u1)ON;
